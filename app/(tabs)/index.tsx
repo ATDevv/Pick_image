@@ -6,18 +6,25 @@ export default function Index() {
 
   const [name, setName] = useState<string>('')
 
-  const handleOnClick = (e: any): void => {
-    setName(e.target.value)
+  const handleOnClick = (value: any): void => {
+    setName(value)
   }
 
   return (
     <View style={styles.container}>
       <View>
         <TextInput
+          multiline
           value={name}
           placeholder='Enter name'
-          onChange={handleOnClick}
-          style={styles.text}
+          onChangeText={handleOnClick}
+          style={{
+            borderColor: 'red',
+            borderWidth: 1,
+            width: 100,
+            padding: 5,
+            color: 'white'
+          }}
         />
       </View>
       <Text style={styles.text}>Home screen of {name}</Text>
