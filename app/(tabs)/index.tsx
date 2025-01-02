@@ -12,32 +12,10 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <View>
-        <TextInput
-          multiline
-          value={name}
-          placeholder='Enter name'
-          onChangeText={handleOnClick}
-          style={{
-            borderColor: 'red',
-            borderWidth: 1,
-            width: 100,
-            padding: 5,
-            color: 'white'
-          }}
-        />
-      </View>
-      <Text style={styles.text}>Home screen of {name}</Text>
-      <Link href="/about" style={{ ...styles.button, textDecorationLine: 'none', borderWidth: 3, borderColor: 'yellow' }}>
+      <Text style={styles.text}>Home Screen</Text>
+      <Link href="/about" style={{ ...styles.button }}>
         Go to About screen
       </Link>
-      <View>
-        <Button
-          title='Increase'
-          onPress={() => {
-            alert('me')
-          }} />
-      </View>
     </View>
   );
 }
