@@ -1,6 +1,6 @@
 import { Stack } from "expo-router";
 
-export default function RootLayout() {
+const RootLayout = () => {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -8,3 +8,5 @@ export default function RootLayout() {
     </Stack>
   )
 }
+
+export default RootLayout

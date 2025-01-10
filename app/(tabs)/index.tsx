@@ -2,14 +2,7 @@ import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
 import { Link } from 'expo-router';
 import { useState } from 'react';
 
-export default function Index() {
-
-  const [name, setName] = useState<string>('')
-
-  const handleOnClick = (value: any): void => {
-    setName(value)
-  }
-
+const Index = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
@@ -26,7 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
-    // marginBottom: 55,
   },
   text: {
     color: '#fff',
@@ -37,6 +29,7 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     color: '#fff',
     marginBottom: 15
-
   },
 });
+
+export default Index
